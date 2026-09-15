@@ -39,7 +39,8 @@
     '스마트 컨트랙트 주소': 'Smart contract address',
     'PSL 토큰 지갑 개발 및 배포 완료': 'PSL token wallet developed and released',
     '다운로드': 'Download',
-    'PSL 토큰 채굴 앱 개발 진행 중...': 'PSL token mining app in development...',
+    '1. PSL 토큰 채굴용 안드로이드 앱. 현재 플레이스토어에서 베타 테스트 진행 중.': '1. Android app for mining PSL tokens. Currently in beta testing on Google Play.',
+    '2. PSL 토큰 채굴용 iOS PWA 앱 광고 플랫폼 승인 대기 중. 승인 후 출시 예정.': '2. iOS PWA app for mining PSL tokens. Awaiting ad platform approval. Launch planned after approval.',
     '위치기반 PSL 토큰 P2P 거래 앱 개발 예정': 'Location-based PSL token P2P trading app planned',
     '소식도, 궁금한 점도': 'News and questions,',
     '여기에서.': 'all in one place.',
@@ -87,6 +88,8 @@
     entries.forEach(entry => { entry.node.nodeValue = english ? entry.english : entry.korean; });
     attributes.forEach(entry => entry.node.setAttribute(entry.attribute, english ? entry.english : entry.korean));
     button.setAttribute('aria-pressed', String(english));
+    button.textContent = english ? '한국어' : 'ENG';
+    button.lang = english ? 'ko' : 'en';
     button.setAttribute('aria-label', english ? '한국어로 전환' : 'Switch to English');
     try { localStorage.setItem('psl-language', english ? 'en' : 'ko'); } catch { /* Storage may be disabled. */ }
   }

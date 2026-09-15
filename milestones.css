@@ -24,10 +24,11 @@
   .site-header nav { column-gap: 14px; row-gap: 10px; }
 }
 .header-inner { flex-wrap: wrap; padding-block: 16px; }
+.brand-controls { display: flex; align-items: center; gap: 16px; }
 .site-header nav { flex-wrap: wrap; }
 .nav-community { display: inline-flex; align-items: center; gap: 16px; }
 .language-toggle { flex-shrink: 0; cursor: pointer; padding: 9px 12px; border: 1px solid #d1c5e8; border-radius: 999px; font-size: .75rem; color: #756980; white-space: nowrap; }
 .language-toggle[hidden] { display: none; }
-html[lang="ko"] .language-toggle [lang="ko"], html[lang="en"] .language-toggle [lang="en"] { color: #6545dc; font-weight: 800; }
+.language-toggle { color: #6545dc; font-weight: 800; }
 .language-toggle:hover { background: #f6f3fc; }
 .language-toggle:focus-visible { outline: 2px solid #6545dc; outline-offset: 4px; }
